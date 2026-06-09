@@ -1,25 +1,21 @@
-buildscript {
-    repositories {
-        google()
-        mavenCentral()
-    }
-    dependencies {
-        classpath 'com.android.tools.build:gradle:8.5.2'
-    }
+plugins {
+    id 'com.android.application' version '9.2.0'
 }
-
-repositories {
-    google()
-}
-
-apply plugin: 'com.android.application'
 
 android {
-    namespace "pl.czak.minimal"
-
-    compileSdkVersion 34
+    namespace = 'pl.czak.minimal'
+    compileSdk = 34
 
     defaultConfig {
-        targetSdk 34
+        applicationId = 'pl.czak.minimal' // Добавлено для корректности
+        minSdk = 26                        // Добавлено для корректности
+        targetSdk = 34
+        versionCode = 1
+        versionName = '1.0'
     }
+}
+
+dependencies {
+    implementation 'androidx.core:core-ktx:1.13.1'
+    implementation 'androidx.appcompat:appcompat:1.7.0'
 }

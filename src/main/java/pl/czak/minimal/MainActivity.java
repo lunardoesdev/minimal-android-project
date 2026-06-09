@@ -11,7 +11,7 @@ public class MainActivity extends Activity
         super.onCreate(savedInstanceState);
 
         TextView label = new TextView(this);
-        label.setText("Hello world!");
+        label.setText("Hello worldd!");
 
         setContentView(label);
     }
